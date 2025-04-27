@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<LangVersion>8.0</LangVersion>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+		<Reference Include="System" />
+		<Reference Include="System.Configuration" />
+		<Reference Include="System.Core" />
+		<Reference Include="System.Data" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\OrderManagement.Models\OrderManagement.Models.csproj" />
+	</ItemGroup>
+</Project>
