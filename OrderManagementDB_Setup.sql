@@ -4,6 +4,15 @@ GO
 USE OrderManagementDB;
 GO
 
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'OrderManagementDB')
+BEGIN
+    CREATE DATABASE OrderManagementDB;
+END
+GO
+
+USE OrderManagementDB;
+GO
+
 -- Create Tables
 CREATE TABLE Users (
     UserID INT IDENTITY(1,1) PRIMARY KEY,
@@ -383,3 +392,8 @@ BEGIN
         od.OrderID = @OrderID
 END
 GO
+
+
+select * from [dbo].[Order]
+
+select * from Users
